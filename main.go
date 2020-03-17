@@ -126,6 +126,8 @@ func processCmdLineArgs() {
 
 	flag.Visit(printFlag)
 
+    //TODO changer la forêt de if pour un truc plus propre
+
 	// Infer frontend from arguments
 	enableCSI = *csiEndpoint != ""
 	enableKubernetes = (*k8sPod || *k8sAPIServer != "") && !enableCSI
